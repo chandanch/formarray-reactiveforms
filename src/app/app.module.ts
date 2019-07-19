@@ -27,13 +27,14 @@ const yourFirebaseConfig = {
 };
 
 // Delete Me!
-import { firebase } from '../env';
+// import { firebase } from '../env';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
 
 
 import { BasicFormComponent } from './basic-form/basic-form.component';
@@ -57,7 +58,7 @@ import { SubmitFormComponent } from './submit-form/submit-form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(firebase),
+    AngularFireModule.initializeApp(yourFirebaseConfig),
     AngularFirestoreModule, 
     AngularFireAuthModule, 
     AngularFireStorageModule,
@@ -68,7 +69,9 @@ import { SubmitFormComponent } from './submit-form/submit-form.component';
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatChipsModule
+    MatChipsModule,
+    MatCardModule
+    
   ],
   bootstrap: [AppComponent]
 })
